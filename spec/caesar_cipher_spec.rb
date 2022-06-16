@@ -1,10 +1,21 @@
 require './lib/caesar_cipher.rb'
 
-describe caesar_cipher do
+describe Caesar do
   describe "one letter" do
     it "a returns d" do
-      cipher = Caesar_cipher.new
-      expect(cipher.caesar_cipher('a', 3)).to eql('d')
+      example = Caesar.new
+      expect(example.caesar_cipher('a', 3)).to eql('d')
     end
+
+    describe "number" do
+      it "5 returns you didn't enter a string" do
+        example = Caesar.new
+        expect(example.caesar_cipher(5, 3)).to eql("You didn't enter a string")
+      end
+    end
+
+      
   end
+
+  
 end
